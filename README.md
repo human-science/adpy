@@ -3,7 +3,7 @@ ADPY is a convert Asciidoc file to html file via Asciidoctor and Python. Also ca
 
 This document is also available in the following languages:
 
-[English](https://github.com/human-science/adpy/README.md) | [日本語](https://github.com/human-science/adpy/README-ja.md)
+[English](https://github.com/human-science/adpy/tree/README.md) | [日本語](https://github.com/human-science/adpy/tree/README-ja.md)
 
 Please visit our company website for more information:
 
@@ -30,7 +30,7 @@ ADPY works on Linux, macOS and Windows and requires all of the following impleme
 1. Clone this repository.
 
     ```
-    $ git clone git@git
+    $ git clone https://github.com/human-science/adpy.git
     $ cd adpy
     ```
 
@@ -104,6 +104,6 @@ If no arguments are set, `html` is defined as `File type` and `en` is defined as
 
 Copyright © 2018 Human Science Co., Ltd. Free use of this software is granted under the terms of the MIT License.
 
-For the full text of the license, see the [LICENSE](https://github.com/human-science/adpy/LICENCE) file.
+For the full text of the license, see the [LICENSE](https://github.com/human-science/adpy/tree/LICENCE) file.
 
 This tool has inspired by [https://github.com/continuous-manual-writing](https://github.com/continuous-manual-writing)

@@ -3,7 +3,7 @@ AsciidocファイルをAsciidoctorとPythonを介してHTMLファイルに変換
 
 この文書は以下の言語で読むことができます。
 
-[English](https://github.com/human-science/adpy/README.md) | [日本語](https://github.com/human-science/adpy/README-ja.md)
+[English](https://github.com/human-science/adpy/tree/README.md) | [日本語](https://github.com/human-science/adpy/tree/README-ja.md)
 
 より詳しい情報をお知りになりたいかたは弊社ウェブサイトへお越しください。
 
@@ -30,7 +30,7 @@ ADPYをLinux、OS X(Mac)またはWindowsで動作させるためには、下記�
 1. このリポジトリーをクローンします。
 
     ```
-    $ git clone git@git
+    $ git clone https://github.com/human-science/adpy.git
     $ cd adpy
     ```
 
@@ -104,6 +104,6 @@ $ adpy pdf ja
 
 Copyright © 2018 Human Science Co., Ltd. Free use of this software is granted under the terms of the MIT License.
 
-For the full text of the license, see the [LICENSE](https://github.com/human-science/adpy/LICENCE) file.
+For the full text of the license, see the [LICENSE](https://github.com/human-science/adpy/tree/LICENCE) file.
 
 This tool has inspired by [https://github.com/continuous-manual-writing](https://github.com/continuous-manual-writing)
