@@ -16,7 +16,7 @@ AsciidocファイルをAsciidoctorとPythonを介してHTMLファイルに変換
 
 この文書は以下の言語で読むことができます。
 
-{uri-rel-file-base}README.adoc[English] | {uri-rel-file-base}README-jp.adoc[日本語]
+{uri-rel-file-base}README.adoc[English] | {uri-rel-file-base}README-ja.adoc[日本語]
 
 より詳しい情報をお知りになりたいかたは弊社ウェブサイトへお越しください。
 

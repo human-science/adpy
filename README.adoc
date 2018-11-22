@@ -16,7 +16,7 @@ ADPY is a convert Asciidoc file to html file via Asciidoctor and Python. Also ca
 
 This document is also available in the following languages:
 
-{uri-rel-file-base}README.adoc[English] | {uri-rel-file-base}README-jp.adoc[日本語]
+{uri-rel-file-base}README.adoc[English] | {uri-rel-file-base}README-ja.adoc[日本語]
 
 Please visit our company website for more information:
 
