@@ -100,4 +100,4 @@ Copyright © 2018 Human Science Co., Ltd. Free use of this software is granted u
 
 For the full text of the license, see the {uri-license}[LICENSE] file.
 
-このツールは右記書籍の内容に影響を受けています。 https://github.com/continuous-manual-writing[https://github.com/continuous-manual-writing]
+このツールは右記書籍に影響を受けています。 https://github.com/continuous-manual-writing[https://github.com/continuous-manual-writing]
