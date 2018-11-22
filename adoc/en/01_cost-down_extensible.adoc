@@ -1,0 +1,38 @@
+= Cost reduction and extensibility
+
+== System Implementation leads 50% Cost reduction
+
+When implementing CMS for manual creation and management, it usually costs more than 10 million. For many companies, the cost of implementing a system will be a heavy burden.
+Manual creation with GitHub and Markdown / Asciidoc makes use of open source software, so it can reduce the initial cost of the creation environment.
+
+image:img_cms_01.png[]
+
+*"We can not prepare expensive budget when implementing a system."*
+
+*"I want to try it with a small start."*
+
+*"I want to keep maintenance costs such as annual license fee of hardware and software suppressed"*
+
+This is a service for customers as described above.
+
+* What is Atom (Atom)
+It is an open source text editor developed by GitHub.
+
+* What is a static site generator
+It is a tool to efficiently generate HTML / CSS based on files written with Markdown and others.
+
+== Extensibility
+
+By selecting open source software that corresponds to the function you want, you can flexibly expand it according to your own work-flow compared to package products.
+Human Science will support what kind of tool combination is best according to your requirements.
+
+
+For example, various plug-ins are provided to Atom which is an open source editor provided by GitHub. In accordance with the company's creation work-flow, you can build an easy-to-use environment by combining desired functions.
+
+image:img_cms_02.png[]
+
+Other examples
+
+* Sourcetree (free Git client tool to enable GUI operation)
+* Redpen (grammar proofing tool)
+* textlint (grammar proofing tool)

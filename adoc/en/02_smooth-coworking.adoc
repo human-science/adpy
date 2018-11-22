@@ -1,0 +1,50 @@
+= Smooth communication
+
+== Cooperation with related parties smoothly
+
+The preparation system of the manual varies from company to company.
+
+1. Engineers create manuals as part of their work
+2. Obtain information from engineers and create by user support department
+3. Obtain information from engineers and create by manual specialized department
+
+In either case, communication between departments is important.
+
+Specification change will occur several times until the product is released and delivered. Also, after the release, manual revision by version upgrade etc. was done, load of version number and change history of manual data was high.
+
+"Information from engineers is difficult to summarize"
+"Data sharing of manuals and documents is complicated, and it takes time and effort to manage data."
+"History management of correction tends to be complicated"
+
+*By using GitHub, it is easy to manage file generations and manage correction history.*
+*It will be possible to check detailed history such as who, when and what modifications were made.*
+
+image:img_cms_04.png[]
+
+By using GitHub's pull request function, you can communicate quickly because you can contact the review request, feedback, and target document all at once.
+Data assets can be shared on the GitHub repository, so data can be shared between authorized holders.
+User authority such as viewing / editing authority can be set.
+
+== Descriptive form with affinity for engineers
+
+By adopting a descriptive form familiar to engineers such as Markdown, Asciidoc, reStructuredText (Lightweight Markup Language), you can create a manuscript without stress.
+There are cases where "lightweight markup language" is used along with Word, Excel, PowerPoint at the development site.
+The text formats used at the development site are as follows.
+
+[cols = "2, 5"]
+| ===
+^ | image: img_cms_05_markdown.png [] | Markdown
+It features that it can be described in a simple style.
+It is suitable for creating simple documents like memoranda.
+^ | image: img_cms_05_asciidoc.png [] | Asciidoc
+It has more style than Markdown.
+Ideal when you want to make it look good with a low cost.
+It is suitable for technical documents and manuals.
+^ | image: img_cms_05_restructured.png [] | reStructuredText
+Notation used in science field.
+It is widely used within the Python community.
+| ===
+
+image:img_cms_05_style.png[]
+
+We propose a description format suitable for the purpose of use of customer's manual and operation system.

@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8"/>
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Asciidoctor 1.5.6.1" name="generator"/>
+  <title>
+   コストダウンと拡張性
+  </title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700" rel="stylesheet"/>
+  <link href="../css/asciidoctor.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+  <link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js">
+  </script>
+  <script src="../js/script.js">
+  </script>
+ </head>
+ <body class="drawer drawer--left drawer--sidebar">
+  <div id="global-header"><a class="modelnumber" href="./index.html">ADPY</a><a class="inline-block" href="https://www.science.co.jp/"><figure><img alt="logo" src="images/logo.png" style="width:180px;" /></figure></a></div>
+  <header role="banner">
+   <button type="button" id="hamburger-button" class="drawer-toggle drawer-hamburger">
+<span class="sr-only">toggle navigation</span>
+<span class="drawer-hamburger-icon"></span>
+</button>
+<div class="drawer-nav-container" id="drawer-nav-container">
+<nav style="display:none;" class="drawer-nav" id="drawer-nav" role="navigation" >
+<ul class="drawer-menu" id="drawer-menu">
+<li class="drawer-brand" id="drawer-brand"><a href="index.html">HOME</a></li>
+<li class="drawer-dropdown">
+<a class="drawer-menu-item" href="01_cost-down_extensible.html#コストダウンと拡張性" aria-expanded="true">コストダウンと拡張性 </a>
+<ul class="drawer-dropdown-menu">
+<li>
+<a class="drawer-dropdown-menu-item" href="01_cost-down_extensible.html#システム導入_50_コストダウン">システム導入 50％コストダウン</a>
+</li>
+<li>
+<a class="drawer-dropdown-menu-item" href="01_cost-down_extensible.html#拡張性">拡張性</a>
+</li>
+</ul>
+</li>
+<li class="drawer-dropdown">
+<a class="drawer-menu-item" href="02_smooth-coworking.html#スムーズなコミュニケーション" aria-expanded="true">スムーズなコミュニケーション </a>
+<ul class="drawer-dropdown-menu">
+<li>
+<a class="drawer-dropdown-menu-item" href="02_smooth-coworking.html#関係者との連携が円滑に">関係者との連携が円滑に</a>
+</li>
+<li>
+<a class="drawer-dropdown-menu-item" href="02_smooth-coworking.html#エンジニアに親和性のある記述形態">エンジニアに親和性のある記述形態</a>
+</li>
+</ul>
+</li>
+<li class="drawer-dropdown">
+<a class="drawer-menu-item" href="03_multi-device_multilingual.html#マルチデバイス_マルチリンガル" aria-expanded="true">マルチデバイス・マルチリンガル </a>
+<ul class="drawer-dropdown-menu">
+<li>
+<a class="drawer-dropdown-menu-item" href="03_multi-device_multilingual.html#マルチデバイス対応">マルチデバイス対応</a>
+</li>
+<li>
+<a class="drawer-dropdown-menu-item" href="03_multi-device_multilingual.html#trados_memsourceと連携">Trados、Memsourceと連携</a>
+</li>
+</ul>
+</li>
+  </header>
+  <div class="drawer-contents">
+   <main class="drawer-container t-gutter" id="content" role="main">
+    <div id="header">
+    </div>
+    <div id="contentOrg">
+     <div class="sect1 contentarea">
+      <h2 id="コストダウンと拡張性">
+       <a class="link" href="#コストダウンと拡張性">
+        コストダウンと拡張性
+       </a>
+      </h2>
+      <div class="sectionbody">
+       <div class="sect2">
+        <h3 id="システム導入_50_コストダウン">
+         <a class="link" href="#システム導入_50_コストダウン">
+          システム導入 50％コストダウン
+         </a>
+        </h3>
+        <div class="paragraph">
+         <p>
+          マニュアル作成・管理のためにCMSを導入する場合、通常1000万以上の費用が必要となります。多くの企業にとって、システム導入費用は大きな負担としてのしかかります。
+          <br/>
+          GitHubとMarkdown/Asciidocでのマニュアル作成は、オープンソースソフトウェアを活用するため、作成環境のイニシャルコストを抑えることができます。
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <span class="image">
+           <img alt="img cms 01" src="images/img_cms_01.png"/>
+          </span>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <strong>
+           「システム導入時に高額な予算を準備できない。」
+          </strong>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <strong>
+           「スモールスタートで試したい。」
+          </strong>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <strong>
+           「ハードウェアやソフトウェアの年間ライセンス費用などの維持費を押さえたい」
+          </strong>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          このようなお客様にぜひお試しいただきたいサービスです。
+         </p>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            Atom（アトム）とは
+            <br/>
+            GitHubが開発したオープンソースのテキストエディターです。
+           </p>
+          </li>
+          <li>
+           <p>
+            静的サイトジェネレーターとは
+            <br/>
+            Markdownなどで書かれたファイルをもとに、効率よくHTML/CSSを生成するためのツールです。
+           </p>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div class="sect2">
+        <h3 id="拡張性">
+         <a class="link" href="#拡張性">
+          拡張性
+         </a>
+        </h3>
+        <div class="paragraph">
+         <p>
+          欲しい機能に対応したオープンソースソフトウェアを選択することで、パッケージ製品と比べて自社作成フローに合わせて柔軟に拡張できます。
+          <br/>
+          どのようなツールの組み合わせが最適かは、ご要件に応じてヒューマンサイエンスがサポートいたします。
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          例えば、GitHub社が提供しているオープンソースエディタであるAtomには、多様なプラグインが提供されています。自社の作成フローに合わせて、欲しい機能を組み合わせることで使いやすい環境を構築できます。
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          <span class="image">
+           <img alt="img cms 02" src="images/img_cms_02.png"/>
+          </span>
+         </p>
+        </div>
+        <div class="paragraph">
+         <p>
+          その他の例
+         </p>
+        </div>
+        <div class="ulist">
+         <ul>
+          <li>
+           <p>
+            Sourcetree（Gitをコマンドラインではなく、GUIで操作できる無料ツール）
+           </p>
+          </li>
+          <li>
+           <p>
+            Redpen（文章校正ツール）
+           </p>
+          </li>
+          <li>
+           <p>
+            textlint（文章校正ツール）
+           </p>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </main>
+   <div id="footer">
+    <div id="copyright">
+     © Human Science Co., Ltd.
+    </div>
+   </div>
+  </div>
+  <button class="totop" type="button">
+   <span class="sr-only">
+    to top
+   </span>
+   <span class="totop-icon">
+   </span>
+  </button>
+  <div class="drawer-overlay drawer-toggle">
+  </div>
+ </body>
+</html>

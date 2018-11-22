@@ -1,0 +1,92 @@
+#global-header { position: fixed; top: 0; height: 60px; width: 100%; z-index: 3; background-color: #4F86C6; text-align: center; display: flex; justify-content: center; align-items: center; }
+#global-header .inline-block { position: absolute; left: 50%; margin-left: -60px; display: none; }
+#global-header .modelnumber { color: #ffffff; font-size: 5vw; font-weight: bold; line-height: 1; width: 70%; }
+
+#mainimg div img { min-height: 0px; }
+
+/*******************************************************************************/
+/* drawer.js
+/* The MIT License (MIT)
+/* Copyright (c) 2014-2015 https://github.com/blivesta/drawer
+/* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+/* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+/*******************************************************************************/
+#hamburger-button { position: fixed; left: 0; top: 0; }
+
+.drawer-hamburger-icon { background-color: #ffffff; }
+.drawer-hamburger-icon::after, .drawer-hamburger-icon::before { background-color: #ffffff; }
+
+.drawer-hamburger.active .drawer-hamburger-icon { background-color: transparent; }
+.drawer-hamburger.active .drawer-hamburger-icon:before, .drawer-hamburger.active .drawer-hamburger-icon:after { top: 0; }
+.drawer-hamburger.active .drawer-hamburger-icon:before { transform: rotate(45deg); }
+.drawer-hamburger.active .drawer-hamburger-icon:after { transform: rotate(-45deg); }
+
+#drawer-nav-container { position: fixed; display: block; top: 60px; bottom: 0; z-index: 2; -webkit-transition: top 0.6s cubic-bezier(0.19, 1, 0.22, 1); transition: top 0.6s cubic-bezier(0.19, 1, 0.22, 1); }
+
+#drawer-nav { position: absolute; box-sizing: border-box; -webkit-overflow-scrolling: touch; overflow: auto; top: 0px; bottom: 0; overflow-y: auto; border-right: 1px solid #ddd; box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2); }
+
+#drawer-menu { margin: 0; padding: 0; list-style: none; }
+
+.drawer--left .drawer-nav { left: 0; }
+
+.drawer-brand a, .drawer-menu-item { color: #262626; font-size: 1.1rem; font-weight: 500; box-sizing: border-box; display: block; text-decoration: none; }
+
+.drawer-brand i { font-size: 1.1rem; padding-left: .75rem; }
+
+.drawer-menu-item:focus, .drawer-dropdown-menu-item:focus { color: #4F86C6; }
+
+.drawer-dropdown-menu { display: block; background-color: inherit; }
+.drawer-dropdown-menu > li { box-sizing: border-box; }
+
+.drawer-dropdown-menu-item { line-height: inherit; padding: 0.4rem; font-size: 1rem; color: #626263; box-sizing: border-box; padding-left: 2.6rem; }
+.drawer-dropdown-menu-item.current { font-weight: 500; background-color: #fff; -webkit-box-shadow: 0 1px 4px #555555; box-shadow: 0 1px 4px #555555; padding-left: 1.6rem; }
+.drawer-dropdown-menu-item.current:hover { color: #4F86C6; }
+
+.drawer-brand:hover, .drawer-brand a:hover { color: #4F86C6; }
+
+.drawer-dropdown:hover, .drawer-menu-item:hover, .drawer-dropdown-menu-item:hover { color: #4F86C6; }
+
+.drawer-container { top: 60px; }
+
+#content h1 > a.link, h2 > a.link, h3 > a.link, #toctitle > a.link, .sidebarblock > .content > .title > a.link, h4 > a.link, h5 > a.link, h6 > a.link, #toc a, #toctitle { color: #555555; border-left: solid 5px #4F86C6; padding-left: 10px; }
+
+#content h1 > a.link:hover, h2 > a.link:hover, h3 > a.link:hover, #toctitle > a.link:hover, .sidebarblock > .content > .title > a.link:hover, h4 > a.link:hover, h5 > a.link:hover, h6 > a.link:hover, #toc a:hover { color: #4F86C6; }
+
+h1, h2, h3, h4, h5, h6 { margin-top: 1.2em; margin-bottom: 0.7em; }
+
+#header { padding-left: 0; padding-right: 0; }
+#header > h1:only-child { border-bottom: 0; display: none; }
+
+.indexsubtitle > h3, .partsname > h4 { margin-top: -6rem; }
+
+h2:before, h3:before, h4:before, h5:before, h6:before { content: ""; display: block; margin-top: -90px; height: 90px; visibility: hidden; }
+
+.totop { position: fixed; z-index: 4; bottom: 0; right: 0; display: none; box-sizing: content-box; width: 2rem; padding: 0; padding: 20px .75rem 20px; border: 0; outline: 0; background-color: #aaaaaa; }
+
+.totop-icon { position: relative; display: block; margin: auto; height: 0; width: 0; bottom: 5px; border: 8px solid #000000; border-color: transparent; border-bottom-color: #ffffff; }
+
+#content { margin-bottom: 3.5rem; }
+
+#footer { border-top: 4px solid #cccccc; padding-top: 20px; padding-bottom: 20px; box-sizing: border-box; display: block; }
+
+#footer-text, #copyright { color: #ffffff; font-size: 0.8rem; font-weight: 200; line-height: 0.8rem; box-sizing: border-box; text-align: center; display: block; }
+
+/* For displays over 41em width. */
+@media (min-width: 41em) { #global-header .modelnumber { position: relative; color: #ffffff; font-size: 2rem; font-weight: bold; width: 60%; display: inline-block; }
+  #global-header .modelnumber.ru { font-size: 1.6rem; } }
+/* For displays over 64em width. */
+@media (min-width: 64em) { #global-header .inline-block { left: 0; margin-left: 10px; display: block; }
+  #global-header .modelnumber { right: 0; color: #ffffff; font-size: 2.0625rem; /*html=100% 1rem=16px*/ font-weight: bold; padding-right: 10px; word-wrap: break-word; }
+  #global-header .modelnumber.ru { font-size: 2rem; }
+  #drawer-nav { width: 12.5em; box-shadow: none; }
+  #drawer-nav-container { position: fixed; display: block; top: 60px; bottom: 0; z-index: 2; }
+  #drawer-nav-container.active { position: fixed; display: block; top: 60px; bottom: 0; z-index: 2; }
+  .h2, h2 { font-size: 2.5rem; color: #4F86C6; }
+  .h3, h3 { font-size: 2rem; color: #4F86C6; }
+  .h4, h4 { font-size: 1.75rem; }
+  .h5, h5 { font-size: 1.5rem; } }
+@media (min-width: 75em) { #drawer-nav { width: 16.25em; box-shadow: none; }
+  #drawer-nav-container { position: fixed; display: block; top: 60px; bottom: 0; z-index: 2; }
+  #drawer-nav-container.active { position: fixed; display: block; top: 60px; bottom: 0; z-index: 2; } }
+body { font-family: 'Roboto', 'Lato', sans-serif, Arial, Osaka; }
