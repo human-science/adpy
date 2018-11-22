@@ -1,0 +1,24 @@
+= Multi-device / multilingual
+
+== Multi-device compatible
+
+Traditionally, it was necessary to manage source files of PDF manuals and HTML manuals separately.
+*This solution output PDF and HTML with the response web design from one source file.*
+
+image:img_cms_06.png[]
+
+image:img_cms_06_html.png[]
+
+If you create one manual data, you can output both HTML and PDF. Therefore, you do not need to create PDF and HTML separately, you can reduce costs.
+
+Nowadays, due to distribution of services through the internet has become commonplace, HTML manuals are getting more important in various industries.
+And, with the spread of tablets and smartphones, multi-device compatibility is required.
+By customizing, this service can output responsive HTML.
+
+== Working with Trados, Memsource
+
+In collaboration with Trados, Memsource which is the de facto standard as translation tool, this service can manage one-stop project on GitHub from creating manual to translation.
+
+image:img_cms_07.png[]
+
+※ Markdown format corresponds to Memsource.

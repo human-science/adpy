@@ -1,0 +1,138 @@
+#!/bin/bash
+# ADPY - Convert Asciidoc to html via Asciidoctor and Python.
+# Require Ruby, Asciidoctor-1.5.6.1(Available only this version, strictly), Asciidoctor-pdf, Python3.X, Beautifulsoup4, and lxml.
+# MIT License
+# Copyright (c) 2018 Human Science Co., Ltd
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, htmlribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+cd `dirname $0`
+
+# Variables
+FNAME=$0
+FTYPE=$1
+LANGS=$2
+MAN="
+ADPY can takes 2 optional arguments as below when conversion.
+
+    $ adpy [File type] [Language code]
+
+    File type:
+        html      Convert Asciidoc to HTML.
+        pdf       Convert Asciidoc to PDF.
+    Language code:
+        en        Asciidoc files in adoc/en folder will convert and output Filetype/en folder.
+        ja        Asciidoc files in adoc/en folder will convert and output Filetype/ja folder.
+
+Other optional arguments is below.
+
+    $ adpy [Other option]
+
+    Other options:
+        version   Display current tools version.
+        man       Display tools manual page.
+
+Copyright © 2018 Human Science Co., Ltd. Free use of this software is granted under the terms of the MIT License.
+"
+
+# Process flow
+# initialize => prepare => main_$FTYPE => after
+
+function after() {
+    if [ "$FTYPE" = "pdf" ]; then
+        rm -rf $FTYPE/$LANGS/images
+    fi
+    rm -f $FTYPE/$LANGS/*.adoc
+
+    echo Done.
+    exit
+}
+
+function main_pdf() {
+    cd $FTYPE/$LANGS
+
+    python ../../lib/insertPreamble.py $LANGS
+    python ../../lib/generateToc.py $LANGS
+    cp ../../lib/toc_$LANGS.adoc .
+
+    asciidoctor -b pdf -r asciidoctor-pdf toc_$LANGS.adoc
+    cd ../../
+
+    after $FTYPE $LANGS
+}
+
+function main_html() {
+    cd $FTYPE/$LANGS
+
+    python ../../lib/insertPreamble.py $LANGS
+    python ../../lib/generateToc.py $LANGS
+
+    for file in `\find . -maxdepth 1 -name "*.adoc"`; do
+        asciidoctor -d book -a stylesdir=../css -b html5 $file
+    done
+
+    python ../../lib/buildNavmenu.py $LANGS
+
+    for file in `\find . -maxdepth 1 -name "*.html"`; do
+        python ../../lib/convertHtml.py $file $LANGS
+    done
+
+    cd ../../
+
+    after $FTYPE $LANGS
+}
+
+function prepare() {
+    if [ -e $FTYPE/$LANGS ]; then
+        rm -rf $FTYPE/$LANGS
+    fi
+    mkdir -p $FTYPE/$LANGS
+
+    if [ -e lib/toc_$LANGS.adoc ]; then
+        rm -rf lib/toc_$LANGS.adoc
+    fi
+
+    cp adoc/$LANGS/*.adoc $FTYPE/$LANGS
+    cp -fr adoc/$LANGS/images $FTYPE/$LANGS/images
+
+
+    if [ $FTYPE = "html" ]; then
+        if [ ! -e html/css ]; then
+            mkdir -p html/css
+        fi
+        if [ ! -e html/js ]; then
+            mkdir -p html/js
+        fi
+        main_html $FTYPE $LANGS
+    fi
+
+    if [ $FTYPE = "pdf" ]; then
+        main_pdf $FTYPE $LANGS
+    fi
+}
+
+function initialize() {
+    if [ "$FTYPE" = "version" ]; then
+        echo V 1.0.0
+        exit
+    fi
+    if [ "$FTYPE" = "man" ]; then
+        echo "$MAN"
+        exit
+    fi
+    if [ "$FTYPE" = "pdf" ]; then
+        FTYPE=$FTYPE
+    else
+        FTYPE=html
+    fi
+    if [ "$LANGS" = "ja" ]; then
+        LANGS=$LANGS
+    else
+        LANGS=en
+    fi
+    prepare $FTYPE $LANGS
+}
+initialize

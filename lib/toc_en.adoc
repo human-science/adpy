@@ -1,0 +1,39 @@
+﻿:doctype: book
+:lang: en
+:hardbreaks:
+:sectnums:
+:sectlinks:
+:sectids:
+:experimental:
+:toc: macro
+:docinfo: shared
+:docinfodir: ../../lib
+ifdef::backend-html5[:nofooter:]
+ifdef::backend-html5[:linkcss:]
+:idprefix:
+:imagesdir: images
+:toclevels: 2
+:stylesdir: css
+:icons: font
+:chapter-label:
+:pdf-stylesdir: ../../lib
+:pdf-style: default-theme.yml
+
+= ADPY
+
+toc::[]
+
+include::index.adoc[]
+
+include::01_cost-down_extensible.adoc[]
+
+<<<
+
+include::02_smooth-coworking.adoc[]
+
+<<<
+
+include::03_multi-device_multilingual.adoc[]
+
+<<<
+

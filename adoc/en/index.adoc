@@ -1,0 +1,28 @@
+= Create and manage documents easier!
+
+Are you facing problems to create manuals and technical materials with Word, FrameMaker, InDesign, etc?
+For such customers, we provide construction of manual creation environment using open sources such as GitHub.
+
+
+image:img_main.jpg[]
+
+* What is GitHub?
+It is a source code management tool used for software development. It is used not only as source code management but also as a document management and sharing tool such as specification documents. In manual creation, change history record, simultaneous work by multiple users, and more are possible. It can be used from 5 users $25 / month.
+
+* What is AsciiDoc?
+It is one of lightweight markup languages ​​such as Markdown. It is possible to convert it into various formats such as HTML, PDF, e-book, and more by writing with a text editor.
+
+== Benefits of manual creation with GitHub and Markdown / Asciidoc
+
+1. <<01_cost-down_extensible.adoc, System introduction 50% Cost reduction>>
+Manual creation with GitHub and Markdown / Asciidoc makes full use of open source software, so it can reduce the initial cost of the creation environment.
+2. <<01_cost-down_extensible.adoc, Extensibility>>
+By selecting open source software that corresponds to the function you want, you can flexibly expand it according to your own flow compared to package products.
+3. <<02_smooth-coworking.adoc, Cooperation with related parties smoothly>>
+By using GitHub's pull request function, you can communicate quickly because you can contact the review request, feedback, and target document all at once.
+4. <<02_smooth-coworking.adoc, Descriptive form with affinity for engineers>>
+By adopting a descriptive form familiar to engineers (lightweight markup language), you can create a manuscript without stress.
+5. <<03_multi-device_ multilingual.adoc, Multi-device compatible>>
+This solution supports response design that can output PDF and HTML from one source file.
+6. <<03_multi-device_multilingual.adoc, Working with Trados\, Memsource>>
+One-stop project management on one stop GitHub from Japanese manuals to translations is possible in cooperation with Trados, Memsource which is the translation tool standard.
